@@ -1155,6 +1155,14 @@ section {
   grid-column: 1 / -1;
 }
 
+.hp {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
 label {
   display: block;
   font-size: 0.85rem;
@@ -1220,10 +1228,10 @@ textarea:focus {
   color: #146c43;
 }
 
-.form-status.fail {
-  display: block;
-  background: #fdecea;
-  color: #b42318;
+.form-status.fail a {
+  color: #8a1c14;
+  text-decoration: underline;
+  font-weight: 600;
 }
 
 .btn[disabled] {

@@ -3,7 +3,7 @@
   var toggle = document.querySelector(".menu-toggle");
   var drops = document.querySelectorAll(".nav-drop > button");
   var form = document.getElementById("contact-form");
-  var FORM_ENDPOINT = "";
+  var FORM_ENDPOINT = "https://formsubmit.co/ajax/connect@pravaahsolutions.com";
 
   if (toggle) {
     toggle.addEventListener("click", function () {
@@ -62,20 +62,53 @@
 
       if (!ok) return;
 
+      if (form._honey && form._honey.value) {
+        document.getElementById("form-status").className = "form-status success";
+        document.getElementById("form-status").textContent =
+          "Thanks for reaching out. We'll get back to you soon.";
+        form.hidden = true;
+        return;
+      }
+
       var payload = {
-        name: form.name.value,
-        company: form.company.value,
-        email: form.email.value,
-        phone: form.phone.value,
-        business: form.business.value,
+        name: form.name.value.trim(),
+        company: form.company.value.trim(),
+        email: form.email.value.trim(),
+        phone: form.phone.value.trim(),
+        business: form.business.value.trim(),
         lookingFor: form.lookingFor.value,
-        outcome: form.outcome.value,
-        message: form.message.value,
+        outcome: form.outcome.value.trim(),
+        message: form.message.value.trim(),
+        _replyto: form.email.value.trim(),
+        _subject: "New Pravaah website lead",
+        _template: "table",
+        _captcha: "false",
       };
 
       var btn = form.querySelector('button[type="submit"]');
       btn.disabled = true;
       btn.textContent = "Sending…";
+
+      function mailtoUrl() {
+        var body = [
+          "Name: " + payload.name,
+          "Company: " + payload.company,
+          "Work email: " + payload.email,
+          "Phone: " + payload.phone,
+          "Business: " + payload.business,
+          "Looking for: " + payload.lookingFor,
+          "Outcome: " + payload.outcome,
+          "",
+          payload.message,
+        ].join("\n");
+        return (
+          "mailto:connect@pravaahsolutions.com" +
+          "?subject=" +
+          encodeURIComponent("New Pravaah website lead") +
+          "&body=" +
+          encodeURIComponent(body)
+        );
+      }
 
       function succeed() {
         form.reset();
@@ -87,27 +120,42 @@
       }
 
       function fail() {
+        var href = mailtoUrl();
         status.className = "form-status fail";
-        status.textContent = "Something went wrong. Please email connect@pravaahsolutions.com.";
+        status.replaceChildren();
+        status.appendChild(
+          document.createTextNode("The form service was unavailable. ")
+        );
+        var link = document.createElement("a");
+        link.href = href;
+        link.textContent = "Send this enquiry by email instead";
+        status.appendChild(link);
         btn.disabled = false;
         btn.textContent = "Start a Conversation";
+        window.location.href = href;
       }
 
-      if (!FORM_ENDPOINT) {
-        window.setTimeout(succeed, 500);
-        return;
-      }
+      var controller = new AbortController();
+      var timer = window.setTimeout(function () {
+        controller.abort();
+      }, 12000);
 
       fetch(FORM_ENDPOINT, {
         method: "POST",
         headers: { "Content-Type": "application/json", Accept: "application/json" },
         body: JSON.stringify(payload),
+        signal: controller.signal,
       })
         .then(function (res) {
-          if (!res.ok) throw new Error("Request failed");
-          succeed();
+          return res.json().then(function (data) {
+            if (!res.ok || data.error) throw new Error(data.error || "Request failed");
+            succeed();
+          });
         })
-        .catch(fail);
+        .catch(fail)
+        .finally(function () {
+          window.clearTimeout(timer);
+        });
     });
   }
 })();
