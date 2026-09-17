@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 390 844" role="img" aria-label="Scrapsure overview placeholder">
+  <rect width="390" height="844" rx="28" fill="#0e1419"/>
+  <rect x="16" y="16" width="358" height="812" rx="22" fill="#f4f7f8"/>
+  <rect x="36" y="40" width="120" height="10" rx="5" fill="#007a95"/>
+  <text x="36" y="84" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="700" fill="#17202a">Overview</text>
+  <rect x="36" y="108" width="318" height="92" rx="16" fill="#ffffff" stroke="#e4eaee"/>
+  <text x="56" y="144" font-family="Inter, Arial, sans-serif" font-size="12" fill="#5c6975">Purchase orders</text>
+  <text x="56" y="172" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="700" fill="#17202a">24 active</text>
+  <rect x="36" y="216" width="150" height="88" rx="16" fill="#ffffff" stroke="#e4eaee"/>
+  <rect x="204" y="216" width="150" height="88" rx="16" fill="#ffffff" stroke="#e4eaee"/>
+  <text x="52" y="252" font-family="Inter, Arial, sans-serif" font-size="12" fill="#5c6975">Shipments</text>
+  <text x="52" y="280" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="700" fill="#007a95">18</text>
+  <text x="220" y="252" font-family="Inter, Arial, sans-serif" font-size="12" fill="#5c6975">Documents</text>
+  <text x="220" y="280" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="700" fill="#17202a">142</text>
+  <rect x="36" y="324" width="318" height="70" rx="14" fill="#ffffff" stroke="#e4eaee"/>
+  <rect x="36" y="406" width="318" height="70" rx="14" fill="#ffffff" stroke="#e4eaee"/>
+  <rect x="36" y="488" width="318" height="70" rx="14" fill="#ffffff" stroke="#e4eaee"/>
+  <rect x="52" y="348" width="180" height="10" rx="5" fill="#17202a"/>
+  <rect x="52" y="368" width="120" height="8" rx="4" fill="#c5d0d6"/>
+  <rect x="52" y="430" width="160" height="10" rx="5" fill="#17202a"/>
+  <rect x="52" y="450" width="90" height="8" rx="4" fill="#c5d0d6"/>
+  <rect x="52" y="512" width="200" height="10" rx="5" fill="#17202a"/>
+  <rect x="52" y="532" width="140" height="8" rx="4" fill="#c5d0d6"/>
+</svg>

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 390 844" role="img" aria-label="Scrapsure shipments placeholder">
+  <rect width="390" height="844" rx="28" fill="#0e1419"/>
+  <rect x="16" y="16" width="358" height="812" rx="22" fill="#f4f7f8"/>
+  <text x="36" y="72" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="700" fill="#17202a">Shipments</text>
+  <rect x="36" y="96" width="80" height="28" rx="14" fill="#007a95"/>
+  <rect x="124" y="96" width="80" height="28" rx="14" fill="#ffffff" stroke="#e4eaee"/>
+  <rect x="36" y="148" width="318" height="96" rx="16" fill="#ffffff" stroke="#e4eaee"/>
+  <rect x="36" y="260" width="318" height="96" rx="16" fill="#ffffff" stroke="#e4eaee"/>
+  <rect x="36" y="372" width="318" height="96" rx="16" fill="#ffffff" stroke="#e4eaee"/>
+  <text x="56" y="186" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#17202a">Inbound � MH 04 AB 2198</text>
+  <text x="56" y="210" font-family="Inter, Arial, sans-serif" font-size="12" fill="#5c6975">PO-1042 � In transit</text>
+  <text x="56" y="298" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#17202a">Outbound � MH 02 CD 4411</text>
+  <text x="56" y="322" font-family="Inter, Arial, sans-serif" font-size="12" fill="#5c6975">PO-1038 � Completed</text>
+  <text x="56" y="410" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#17202a">Inbound � GJ 01 EF 9088</text>
+  <text x="56" y="434" font-family="Inter, Arial, sans-serif" font-size="12" fill="#5c6975">PO-1044 � Documents pending</text>
+</svg>

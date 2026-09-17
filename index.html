@@ -3,21 +3,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Pravaah Solutions | Building Systems That Keep Business Moving</title>
-  <meta name="description" content="Pravaah Solutions builds digital solutions that help businesses create a professional online presence, digitize operations, and build practical business software." />
-  <meta name="keywords" content="digital solutions company, business website development, business website design, custom business software, business process digitization, operations management software, shipment management software, document management, recycling business software, scrap management software" />
+  <title>Pravaah Solutions | Websites, Apps &amp; Digital Solutions for Businesses</title>
+  <meta name="description" content="Pravaah Solutions helps businesses digitize, automate and improve their workflows through professional websites, mobile apps and custom business applications." />
   <link rel="canonical" href="https://pravaahsolutions.com/" />
-  <meta property="og:title" content="Pravaah Solutions | Building Systems That Keep Business Moving" />
-  <meta property="og:description" content="From professional business websites to custom software and operational platforms, Pravaah Solutions helps businesses turn processes into practical digital solutions." />
+  <meta name="theme-color" content="#007a95" />
+  <meta property="og:title" content="Pravaah Solutions | Websites, Apps &amp; Digital Solutions for Businesses" />
+  <meta property="og:description" content="Pravaah Solutions helps businesses digitize, automate and improve their workflows through professional websites, mobile apps and custom business applications." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://pravaahsolutions.com/" />
-  <meta property="og:image" content="assets/logo.png" />
-  <meta name="theme-color" content="#17202A" />
-  <link rel="icon" href="assets/logo.png" />
+  <meta property="og:image" content="assets/images/logo-mark.svg" />
+  <meta name="twitter:card" content="summary" />
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -25,584 +25,429 @@
     "name": "Pravaah Solutions",
     "url": "https://pravaahsolutions.com/",
     "email": "connect@pravaahsolutions.com",
-    "description": "Pravaah Solutions builds digital solutions that help businesses create a professional online presence, digitize operations, and build practical business software.",
-    "slogan": "Building systems that keep business moving."
+    "description": "Pravaah Solutions helps businesses digitize, automate and improve their workflows through professional websites, mobile apps and custom business applications."
   }
   </script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <header class="site-header">
-    <nav class="nav-inner wrap" aria-label="Primary">
+  <header class="site-header" id="site-header">
+    <nav class="nav wrap" aria-label="Primary">
       <a class="logo" href="index.html">
-        <img src="assets/logo.png" alt="Pravaah Solutions" width="172" height="56" />
+        <img src="assets/images/logo.svg" alt="Pravaah Solutions" width="196" height="40" />
       </a>
-      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-panel" aria-label="Open menu">
-        <span></span>
+      <button class="menu-toggle" type="button" id="menu-toggle" aria-expanded="false" aria-controls="nav-panel" aria-label="Open menu">
+        <span class="menu-toggle-bars" aria-hidden="true"></span>
       </button>
+      <div class="nav-backdrop" id="nav-backdrop" hidden></div>
       <div class="nav-panel" id="nav-panel">
         <ul class="nav-links">
-          <li><a href="index.html" aria-current="page">Home</a></li>
-          <li class="nav-drop">
-            <button type="button" aria-expanded="false">Services <svg class="caret" viewBox="0 0 12 12" aria-hidden="true"><path fill="currentColor" d="M2 4l4 4 4-4"/></svg></button>
-            <div class="dropdown">
-              <a href="#websites">Business Websites</a>
-              <a href="#software">Custom Software</a>
-              <a href="#operations">Managed Operations</a>
-            </div>
-          </li>
-          <li class="nav-drop">
-            <button type="button">Products <svg class="caret" viewBox="0 0 12 12" aria-hidden="true"><path fill="currentColor" d="M2 4l4 4 4-4"/></svg></button>
-            <div class="dropdown">
-              <a href="scrapsure.html">Scrapsure</a>
-            </div>
-          </li>
+          <li><a href="#services">Services</a></li>
           <li><a href="#how-it-works">How It Works</a></li>
+          <li><a href="#projects">Projects</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
-        <a class="btn btn-primary nav-cta" href="#contact">Talk to Us</a>
+        <a class="btn btn-primary nav-cta" href="#contact">Tell Us About Your Project</a>
       </div>
     </nav>
   </header>
 
   <main id="main">
-    <section class="hero">
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="hero-bg" aria-hidden="true"></div>
       <div class="wrap hero-grid">
-        <div class="reveal">
-          <p class="hero-badge">Business × Technology × Operations</p>
-          <h1>Building systems that <span class="accent">keep business moving.</span></h1>
-          <p class="lede">From professional business websites to custom software and operational platforms, Pravaah Solutions helps businesses turn ideas, processes, and opportunities into practical digital solutions.</p>
+        <div class="hero-copy reveal-up">
+          <p class="eyebrow">You explain the problem. We figure out the technology.</p>
+          <h1 id="hero-heading">Turn Your Business Problems Into Simple Digital Solutions</h1>
+          <p class="lede">Websites, mobile apps and custom business software built around the way your business actually works.</p>
           <div class="actions">
-            <a class="btn btn-primary" href="#contact">Build With Pravaah <svg class="arrow" viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M3 8h8.2L8.4 5.2l.8-.8L14 8l-4.8 3.6-.8-.8L11.2 8H3z"/></svg></a>
-            <a class="btn btn-secondary" href="#services">Explore Our Solutions</a>
+            <a class="btn btn-primary" href="#contact">
+              Tell Us About Your Project
+              <svg class="icon-arrow" viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M3 8h8.2L8.4 5.2l.8-.8L14 8l-4.8 3.6-.8-.8L11.2 8H3z"/></svg>
+            </a>
+            <a class="btn btn-whatsapp js-whatsapp" href="#contact">WhatsApp Us</a>
           </div>
-          <p class="hero-note">Digital solutions designed around the way your business works.</p>
+          <p class="trust-note">No technical knowledge required. Tell us what you need in simple words.</p>
         </div>
-        <aside class="flow-graphic reveal delay-2" tabindex="0" aria-label="Pravaah flow: business, people, information, technology, and operations connected">
-          <span class="ring r1" aria-hidden="true"></span>
-          <span class="ring r2" aria-hidden="true"></span>
-          <span class="ring r3" aria-hidden="true"></span>
-          <article class="flow-core">
-            <div class="flow-core-top">
-              <span>Pravaah Flow</span>
-              <span class="status-dot" aria-hidden="true"></span>
+
+        <div class="hero-visual reveal scale-in" aria-hidden="true">
+          <div class="transform-board">
+            <div class="transform-col messy">
+              <p class="transform-label">Today</p>
+              <article class="mini-card delay-a">WhatsApp threads</article>
+              <article class="mini-card delay-b">Excel versions</article>
+              <article class="mini-card delay-c">Paper files</article>
+              <article class="mini-card delay-d">Missed follow-ups</article>
             </div>
-            <div class="p-mark" aria-hidden="true">P</div>
-            <h2>Connected Business</h2>
-            <p>People · Processes · Information · Technology</p>
+            <div class="transform-flow">
+              <span class="flow-dot"></span>
+              <span class="flow-line"></span>
+              <span class="flow-dot"></span>
+            </div>
+            <div class="transform-col clean">
+              <p class="transform-label">With Pravaah</p>
+              <div class="app-card">
+                <div class="app-card-top">
+                  <span>Business workflow</span>
+                  <span class="live-dot"></span>
+                </div>
+                <div class="app-rows">
+                  <span></span><span></span><span></span>
+                </div>
+                <p>One place for people, work and records.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="problem" class="section" aria-labelledby="problem-heading">
+      <div class="wrap">
+        <header class="section-head reveal-up">
+          <h2 id="problem-heading">Is Your Business Still Running On...</h2>
+        </header>
+        <div class="problem-grid">
+          <article class="problem-card reveal-up">
+            <span class="icon-bubble" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.7-1.2A9 9 0 1 0 12 3zm.1 14.4c-1.5 0-2.9-.4-4.1-1.2l-.3-.2-2.5.7.7-2.4-.2-.3A6.7 6.7 0 1 1 12.1 17.4z"/></svg>
+            </span>
+            <h3>WhatsApp</h3>
+            <p>Important information gets buried inside conversations.</p>
           </article>
-          <span class="sat s1"><b>01</b> Business</span>
-          <span class="sat s2"><b>02</b> People</span>
-          <span class="sat s3"><b>03</b> Information</span>
-          <span class="sat s4"><b>04</b> Technology</span>
-          <span class="sat s5"><b>05</b> Operations</span>
-        </aside>
+          <article class="problem-card reveal-up">
+            <span class="icon-bubble" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="5" width="16" height="14" rx="2"/><path d="M4 10h16M4 14h16M10 5v14"/></svg>
+            </span>
+            <h3>Excel</h3>
+            <p>Data is spread across files and versions.</p>
+          </article>
+          <article class="problem-card reveal-up">
+            <span class="icon-bubble" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M7 4.5h8l3 3V19a1.5 1.5 0 0 1-1.5 1.5h-9.5A1.5 1.5 0 0 1 5.5 19V6A1.5 1.5 0 0 1 7 4.5z"/><path d="M9 12h6M9 15.5h4"/></svg>
+            </span>
+            <h3>Paperwork</h3>
+            <p>Documents are difficult to track and retrieve.</p>
+          </article>
+          <article class="problem-card reveal-up">
+            <span class="icon-bubble" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="3"/><path d="M5 19c.7-3.2 3.2-5 7-5s6.3 1.8 7 5"/><path d="M16 8h4M18 6v4"/></svg>
+            </span>
+            <h3>Manual follow-ups</h3>
+            <p>People spend the day chasing updates instead of doing the work.</p>
+          </article>
+          <article class="problem-card reveal-up">
+            <span class="icon-bubble" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="4" width="7" height="7" rx="1.5"/><rect x="13" y="4" width="7" height="7" rx="1.5"/><rect x="4" y="13" width="7" height="7" rx="1.5"/><path d="M16.5 13.5v6M13.5 16.5h6"/></svg>
+            </span>
+            <h3>Repeated data entry</h3>
+            <p>The same details are typed again and again.</p>
+          </article>
+          <article class="problem-card reveal-up">
+            <span class="icon-bubble" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="7" cy="7" r="2.2"/><circle cx="17" cy="7" r="2.2"/><circle cx="7" cy="17" r="2.2"/><circle cx="17" cy="17" r="2.2"/><path d="M9.2 7h5.6M7 9.2v5.6M17 9.2v5.6"/></svg>
+            </span>
+            <h3>Disconnected systems</h3>
+            <p>Tools do not talk to each other, so nothing feels complete.</p>
+          </article>
+        </div>
+        <p class="bridge-line reveal-up">We can help turn that into a simple digital workflow.</p>
       </div>
     </section>
 
-    <section id="problem">
+    <section id="services" class="section section-soft" aria-labelledby="services-heading">
       <div class="wrap">
-        <div class="problem-head">
-          <p class="eyebrow">The problem</p>
-          <h2>Your business shouldn't run on <span class="accent">scattered information.</span></h2>
-          <p class="lede">Many businesses have digitized parts of their work, but their actual operations remain fragmented across different tools, documents, devices, and people.</p>
-        </div>
-        <div class="problem-body">
-          <div class="scatter-field" tabindex="0" aria-label="Scattered tools and records. Hover or focus to see them spread apart.">
-            <span class="scatter-glow" aria-hidden="true"></span>
-            <article class="scatter-card">
-              <span class="scatter-icon wa" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.7-1.2A9 9 0 1 0 12 3zm.1 14.4c-1.5 0-2.9-.4-4.1-1.2l-.3-.2-2.5.7.7-2.4-.2-.3A6.7 6.7 0 1 1 12.1 17.4zm3.8-4.4c-.2-.1-1.2-.6-1.4-.7-.2-.1-.3-.1-.5.1l-.7.8c-.1.2-.3.2-.5.1-.9-.4-1.7-1.1-2.2-2-.2-.3 0-.4.1-.6l.4-.5c.1-.1.1-.3.1-.4s0-.3-.1-.4l-.7-1.6c-.2-.4-.4-.4-.5-.4h-.4c-.2 0-.4.1-.6.3-.2.2-.8.8-.8 1.9s.8 2.2.9 2.3c.2.3 1.6 2.6 4 3.5 1.6.6 2 .5 2.4.4.4-.1 1.2-.5 1.4-1 .2-.5.2-.9.1-1 0-.1-.2-.2-.4-.3z"/></svg></span>
-              WhatsApp
-            </article>
-            <article class="scatter-card">
-              <span class="scatter-icon excel" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="5" width="16" height="14" rx="2"/><path d="M4 10h16M4 14h16M10 5v14"/></svg></span>
-              Excel
-            </article>
-            <article class="scatter-card">
-              <span class="scatter-icon mail" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3.5" y="6" width="17" height="12" rx="2"/><path d="m4 8 8 6 8-6"/></svg></span>
-              Email
-            </article>
-            <article class="scatter-card">
-              <span class="scatter-icon pdf" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M7 3.5h7l5 5V20a1.5 1.5 0 0 1-1.5 1.5h-10.5A1.5 1.5 0 0 1 5.5 20V5A1.5 1.5 0 0 1 7 3.5z"/><path d="M14 3.5V9h5.5"/></svg></span>
-              PDFs
-            </article>
-            <article class="scatter-card">
-              <span class="scatter-icon people" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="3"/><path d="M6 19c.6-3 2.8-4.5 6-4.5s5.4 1.5 6 4.5"/></svg></span>
-              People
-            </article>
-            <article class="scatter-card">
-              <span class="scatter-icon paper" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M7 4.5h8l3 3V19a1.5 1.5 0 0 1-1.5 1.5h-9.5A1.5 1.5 0 0 1 5.5 19V6A1.5 1.5 0 0 1 7 4.5z"/><path d="M9 12h6M9 15.5h4"/></svg></span>
-              Paper
-            </article>
-            <article class="scatter-card">
-              <span class="scatter-icon photos" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="6" width="16" height="13" rx="2"/><circle cx="9" cy="11" r="1.5"/><path d="m8 17 3.2-3.2a1 1 0 0 1 1.4 0L16 17h4"/></svg></span>
-              Photos
-            </article>
-          </div>
-          <ol class="problem-points">
-            <li>
-              <span>01</span>
-              <div>
-                <h3>Duplicate work</h3>
-                <p>Information gets entered and shared repeatedly.</p>
-              </div>
-            </li>
-            <li>
-              <span>02</span>
-              <div>
-                <h3>Missing information</h3>
-                <p>Important details become difficult to find.</p>
-              </div>
-            </li>
-            <li>
-              <span>03</span>
-              <div>
-                <h3>Delayed updates</h3>
-                <p>People don't always know the latest status.</p>
-              </div>
-            </li>
-            <li>
-              <span>04</span>
-              <div>
-                <h3>Operational confusion</h3>
-                <p>Workflows become dependent on manual coordination.</p>
-              </div>
-            </li>
-          </ol>
-        </div>
-      </div>
-    </section>
-
-    <section class="section-muted">
-      <div class="wrap split">
-        <div>
-          <p class="eyebrow">The shift</p>
-          <h2>Pravaah brings the pieces together.</h2>
-          <p>Start with a digital presence. Build a digital system. Scale with operational support.</p>
-        </div>
-        <div class="vertical-flow">
-          <div class="v-step">
-            <div class="v-rail"><span class="v-dot"></span><span class="v-line"></span></div>
-            <div><h3>Scattered information</h3><p>Work lives in too many places.</p></div>
-          </div>
-          <div class="v-step">
-            <div class="v-rail"><span class="v-dot"></span><span class="v-line"></span></div>
-            <div><h3>Connected workflow</h3><p>People, documents, and processes share one path.</p></div>
-          </div>
-          <div class="v-step">
-            <div class="v-rail"><span class="v-dot"></span><span class="v-line"></span></div>
-            <div><h3>Better visibility</h3><p>See what moved, what is pending, and what is complete.</p></div>
-          </div>
-          <div class="v-step">
-            <div class="v-rail"><span class="v-dot"></span></div>
-            <div><h3>Better operations</h3><p>Less chasing. More flow.</p></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="services">
-      <div class="wrap">
-        <p class="eyebrow">What we build</p>
-        <h2>Digital solutions for businesses that are ready to move forward.</h2>
-        <p class="lede">A technology partner for websites, custom software, and operational support — not a one-off agency project.</p>
-        <div class="cards-3">
-          <article class="card" id="websites">
-            <div class="icon-mark">01</div>
+        <header class="section-head reveal-up">
+          <h2 id="services-heading">What We Build</h2>
+          <p class="lede">Practical digital tools for the way your team already works — not technology for its own sake.</p>
+        </header>
+        <div class="service-grid">
+          <article class="service-card reveal-up">
+            <span class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 10h18"/></svg>
+            </span>
             <h3>Business Websites</h3>
-            <p><strong>Build credibility. Explain what you do. Generate opportunities.</strong> Professional websites designed around your business and customers.</p>
-            <a class="btn btn-secondary" href="#website-leads">Build My Website <svg class="arrow" viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M3 8h8.2L8.4 5.2l.8-.8L14 8l-4.8 3.6-.8-.8L11.2 8H3z"/></svg></a>
+            <p>Professional websites that help businesses establish credibility and generate enquiries.</p>
+            <a class="text-link" href="#contact">Start with a website <svg class="icon-arrow" viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M3 8h8.2L8.4 5.2l.8-.8L14 8l-4.8 3.6-.8-.8L11.2 8H3z"/></svg></a>
           </article>
-          <article class="card" id="software">
-            <div class="icon-mark">02</div>
-            <h3>Custom Software</h3>
-            <p><strong>Turn your business workflow into a system.</strong> Software built around the way your business actually works.</p>
-            <a class="btn btn-secondary" href="#contact">Build a System <svg class="arrow" viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M3 8h8.2L8.4 5.2l.8-.8L14 8l-4.8 3.6-.8-.8L11.2 8H3z"/></svg></a>
+          <article class="service-card reveal-up">
+            <span class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M8 9h8M8 13h5"/></svg>
+            </span>
+            <h3>Business Applications</h3>
+            <p>Custom applications designed around actual business workflows.</p>
+            <a class="text-link" href="#contact">Describe your workflow <svg class="icon-arrow" viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M3 8h8.2L8.4 5.2l.8-.8L14 8l-4.8 3.6-.8-.8L11.2 8H3z"/></svg></a>
           </article>
-          <article class="card" id="operations">
-            <div class="icon-mark">03</div>
-            <h3>Managed Operations</h3>
-            <p><strong>When software needs people behind it.</strong> Trained operations personnel can help maintain digital workflows when required.</p>
-            <a class="btn btn-secondary" href="#ops">Discuss Operations <svg class="arrow" viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M3 8h8.2L8.4 5.2l.8-.8L14 8l-4.8 3.6-.8-.8L11.2 8H3z"/></svg></a>
+          <article class="service-card reveal-up">
+            <span class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="8" y="3" width="8" height="18" rx="2"/><path d="M11 5.5h2M12 18.5h.01"/></svg>
+            </span>
+            <h3>Mobile Apps</h3>
+            <p>Apps for customers, employees and internal operations.</p>
+            <a class="text-link" href="#contact">Talk about an app <svg class="icon-arrow" viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M3 8h8.2L8.4 5.2l.8-.8L14 8l-4.8 3.6-.8-.8L11.2 8H3z"/></svg></a>
+          </article>
+          <article class="service-card reveal-up">
+            <span class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 16V8m0 8 3-3m-3 3-3-3M19 8v8m0-8-3 3m3-3 3 3"/><circle cx="12" cy="12" r="2.2"/></svg>
+            </span>
+            <h3>Automation</h3>
+            <p>Reduce repetitive manual work and connect disconnected processes.</p>
+            <a class="text-link" href="#contact">Simplify a process <svg class="icon-arrow" viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M3 8h8.2L8.4 5.2l.8-.8L14 8l-4.8 3.6-.8-.8L11.2 8H3z"/></svg></a>
           </article>
         </div>
       </div>
     </section>
 
-    <section id="website-leads" class="section-muted">
+    <section id="no-tech" class="section" aria-labelledby="no-tech-heading">
       <div class="wrap">
-        <p class="eyebrow">Business websites</p>
-        <h2>Your business deserves a better digital presence.</h2>
-        <p class="lede">Whether you're starting from zero or replacing an outdated website, Pravaah builds modern digital experiences designed to make your business look credible and help customers take action.</p>
-        <p>These are concept examples only — not client work.</p>
-        <div class="concept-grid">
-          <figure class="concept">
-            <div class="concept-bar"><i></i><i></i><i></i></div>
-            <div class="concept-body">
-              <div class="hero-bar"></div>
-              <div class="line"></div><div class="line" style="width:55%"></div>
-              <div class="cta-bar"></div>
-            </div>
-            <figcaption>Manufacturing website · Concept</figcaption>
-          </figure>
-          <figure class="concept">
-            <div class="concept-bar"><i></i><i></i><i></i></div>
-            <div class="concept-body">
-              <div class="hero-bar" style="width:58%"></div>
-              <div class="line"></div><div class="line" style="width:72%"></div>
-              <div class="cta-bar"></div>
-            </div>
-            <figcaption>Industrial business website · Concept</figcaption>
-          </figure>
-          <figure class="concept">
-            <div class="concept-bar"><i></i><i></i><i></i></div>
-            <div class="concept-body">
-              <div class="hero-bar" style="width:64%"></div>
-              <div class="line"></div><div class="line" style="width:40%"></div>
-              <div class="cta-bar"></div>
-            </div>
-            <figcaption>Trading company website · Concept</figcaption>
-          </figure>
-          <figure class="concept">
-            <div class="concept-bar"><i></i><i></i><i></i></div>
-            <div class="concept-body">
-              <div class="hero-bar"></div>
-              <div class="line" style="width:80%"></div><div class="line"></div>
-              <div class="cta-bar"></div>
-            </div>
-            <figcaption>Service business website · Concept</figcaption>
-          </figure>
-          <figure class="concept">
-            <div class="concept-bar"><i></i><i></i><i></i></div>
-            <div class="concept-body">
-              <div class="hero-bar" style="width:50%"></div>
-              <div class="line"></div><div class="line" style="width:62%"></div>
-              <div class="cta-bar"></div>
-            </div>
-            <figcaption>Professional company website · Concept</figcaption>
-          </figure>
-          <figure class="concept">
-            <div class="concept-bar"><i></i><i></i><i></i></div>
-            <div class="concept-body">
-              <div class="hero-bar" style="width:66%"></div>
-              <div class="line"></div><div class="line" style="width:48%"></div>
-              <div class="cta-bar"></div>
-            </div>
-            <figcaption>Local business website · Concept</figcaption>
-          </figure>
-        </div>
-        <div class="cards-4">
-          <article class="card">
-            <h3>Professional</h3>
-            <p>Make a strong first impression.</p>
-          </article>
-          <article class="card">
-            <h3>Clear</h3>
-            <p>Explain your products and services clearly.</p>
-          </article>
-          <article class="card">
-            <h3>Responsive</h3>
-            <p>Work beautifully across desktop, tablet, and mobile.</p>
-          </article>
-          <article class="card">
-            <h3>Conversion-focused</h3>
-            <p>Make it easy for customers to contact you.</p>
-          </article>
-        </div>
-        <div class="actions" style="margin-top:28px">
-          <a class="btn btn-primary" href="#contact">Get Your Website</a>
-          <a class="btn btn-secondary" href="#contact">Talk to Us</a>
-        </div>
+        <header class="section-head reveal-up">
+          <h2 id="no-tech-heading">You Don't Need To Know What Technology You Need.</h2>
+          <p class="lede">Tell us what is happening in your business. We'll help identify what can be improved and what technology makes sense.</p>
+        </header>
+        <ol class="process-flow">
+          <li class="process-step reveal-up">
+            <span class="process-num">01</span>
+            <h3>Your Problem</h3>
+            <p>Tell us what is difficult today.</p>
+          </li>
+          <li class="process-step reveal-up">
+            <span class="process-num">02</span>
+            <h3>We Understand</h3>
+            <p>We listen to how your work actually happens.</p>
+          </li>
+          <li class="process-step reveal-up">
+            <span class="process-num">03</span>
+            <h3>We Plan</h3>
+            <p>We suggest a simple path forward.</p>
+          </li>
+          <li class="process-step reveal-up">
+            <span class="process-num">04</span>
+            <h3>We Build</h3>
+            <p>We turn the plan into a working solution.</p>
+          </li>
+          <li class="process-step reveal-up">
+            <span class="process-num">05</span>
+            <h3>You Grow</h3>
+            <p>Your team spends less time chasing, more time working.</p>
+          </li>
+        </ol>
       </div>
     </section>
 
-    <section id="journey">
+    <section id="how-it-works" class="section section-soft" aria-labelledby="how-heading">
       <div class="wrap">
-        <p class="eyebrow">How businesses grow with Pravaah</p>
-        <h2>Start with a website. Build the system when you're ready.</h2>
-        <div class="journey">
-          <article class="journey-card">
-            <div class="step">01</div>
-            <h3>Digital Presence</h3>
-            <p>Professional website.</p>
-            <span class="down-arrow" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 16 16"><path fill="currentColor" d="M8 3v8.2l2.8-2.8.8.8L8 14 4.4 11.2l.8-.8L8 11.2V3z"/></svg></span>
-          </article>
-          <article class="journey-card">
-            <div class="step">02</div>
-            <h3>Digital Workflow</h3>
-            <p>Connect forms, leads, documents, and processes.</p>
-            <span class="down-arrow" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 16 16"><path fill="currentColor" d="M8 3v8.2l2.8-2.8.8.8L8 14 4.4 11.2l.8-.8L8 11.2V3z"/></svg></span>
-          </article>
-          <article class="journey-card">
-            <div class="step">03</div>
-            <h3>Business Software</h3>
-            <p>Build custom systems around operations.</p>
-            <span class="down-arrow" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 16 16"><path fill="currentColor" d="M8 3v8.2l2.8-2.8.8.8L8 14 4.4 11.2l.8-.8L8 11.2V3z"/></svg></span>
-          </article>
-          <article class="journey-card">
-            <div class="step">04</div>
-            <h3>Managed Operations</h3>
-            <p>Add Pravaah operational support when needed.</p>
-          </article>
-        </div>
+        <header class="section-head reveal-up">
+          <h2 id="how-heading">From Idea To Implementation</h2>
+          <p class="lede">Here is exactly what happens after you contact Pravaah Solutions.</p>
+        </header>
+        <ol class="steps-list">
+          <li class="step-card reveal-up">
+            <span>01</span>
+            <h3>Tell Us Your Problem</h3>
+            <p>Share what you want to improve, in your own words.</p>
+          </li>
+          <li class="step-card reveal-up">
+            <span>02</span>
+            <h3>We Understand Your Workflow</h3>
+            <p>We learn how your people, records and processes work today.</p>
+          </li>
+          <li class="step-card reveal-up">
+            <span>03</span>
+            <h3>We Plan The Right Solution</h3>
+            <p>You get a clear recommendation — not a pile of technical options.</p>
+          </li>
+          <li class="step-card reveal-up">
+            <span>04</span>
+            <h3>We Design &amp; Build</h3>
+            <p>We create the website, app or business system around your work.</p>
+          </li>
+          <li class="step-card reveal-up">
+            <span>05</span>
+            <h3>We Launch</h3>
+            <p>Your team starts using it with guidance, not guesswork.</p>
+          </li>
+          <li class="step-card reveal-up">
+            <span>06</span>
+            <h3>We Support &amp; Improve</h3>
+            <p>We stay with you as the business changes.</p>
+          </li>
+        </ol>
       </div>
     </section>
 
-    <section id="scrapsure" class="section-dark">
-      <div class="wrap product-layout">
-        <div>
-          <span class="badge">Product</span>
-          <h2>Scrapsure</h2>
-          <p class="lede" style="color:rgba(255,255,255,.8)">A smarter way to manage shipments, documents, and operational records.</p>
-          <p>Built for recycling and scrap businesses that need better control over shipment operations, Purchase Orders, quantities, and documentation.</p>
-          <ul class="feature-list">
-            <li><span class="check" aria-hidden="true">→</span> Purchase Order tracking</li>
-            <li><span class="check" aria-hidden="true">→</span> Shipment management</li>
-            <li><span class="check" aria-hidden="true">→</span> Quantity fulfillment</li>
-            <li><span class="check" aria-hidden="true">→</span> Document management</li>
-            <li><span class="check" aria-hidden="true">→</span> Company management</li>
-            <li><span class="check" aria-hidden="true">→</span> User access control</li>
-            <li><span class="check" aria-hidden="true">→</span> Operational visibility</li>
-          </ul>
-          <div class="vertical-flow" style="margin-bottom:28px">
-            <div class="v-step"><div class="v-rail"><span class="v-dot"></span><span class="v-line"></span></div><div><h3>Purchase Order</h3></div></div>
-            <div class="v-step"><div class="v-rail"><span class="v-dot"></span><span class="v-line"></span></div><div><h3>Multiple shipments</h3></div></div>
-            <div class="v-step"><div class="v-rail"><span class="v-dot"></span><span class="v-line"></span></div><div><h3>Quantity fulfilled</h3></div></div>
-            <div class="v-step"><div class="v-rail"><span class="v-dot"></span><span class="v-line"></span></div><div><h3>Documents</h3></div></div>
-            <div class="v-step"><div class="v-rail"><span class="v-dot"></span></div><div><h3>Complete shipment record</h3></div></div>
+    <section id="projects" class="section" aria-labelledby="projects-heading">
+      <div class="wrap">
+        <header class="section-head reveal-up">
+          <h2 id="projects-heading">Built To Solve Real Business Problems</h2>
+          <p class="lede">Real software, built around a real operational workflow.</p>
+        </header>
+        <article class="project-feature reveal">
+          <div class="project-copy">
+            <p class="eyebrow">Featured project</p>
+            <h3>Scrapsure</h3>
+            <p>A shipment and operations management application designed for recycling businesses.</p>
+            <ul class="feature-chips">
+              <li>Shipment management</li>
+              <li>Purchase orders</li>
+              <li>Document management</li>
+              <li>Operational workflows</li>
+              <li>Business data</li>
+            </ul>
+            <a class="btn btn-primary" href="scrapsure.html">View Project <svg class="icon-arrow" viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M3 8h8.2L8.4 5.2l.8-.8L14 8l-4.8 3.6-.8-.8L11.2 8H3z"/></svg></a>
           </div>
-          <a class="btn btn-primary" href="scrapsure.html">Explore Scrapsure <svg class="arrow" viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M3 8h8.2L8.4 5.2l.8-.8L14 8l-4.8 3.6-.8-.8L11.2 8H3z"/></svg></a>
-        </div>
-        <div class="phone-stage">
-          <figure class="phone">
-            <img src="assets/scrapsure-overview.png" alt="Scrapsure operational overview dashboard on mobile" width="390" height="844" loading="lazy" />
-          </figure>
-          <figure class="phone">
-            <img src="assets/scrapsure-shipments.png" alt="Scrapsure shipments list with status, vehicle, and purchase order details" width="390" height="844" loading="lazy" />
-          </figure>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="wrap">
-        <p class="eyebrow">Initial focus</p>
-        <h2>One connected operational system for recycling and scrap businesses.</h2>
-        <p class="lede">These businesses often manage work through WhatsApp, Excel, paper, PDFs, photos, and scattered records across people. Scrapsure is built to bring that into one place: companies, users, Purchase Orders, shipments, quantities, and documents.</p>
-        <p>A Purchase Order can be fulfilled through multiple shipments. Each shipment records the quantity it fulfills and carries its documents — invoices, e-way bills, weighment slips, material photographs, and more — into a complete digital record.</p>
-      </div>
-    </section>
-
-    <section id="ops" class="section-muted">
-      <div class="wrap split">
-        <div>
-          <p class="eyebrow">Software + Operations</p>
-          <h2>Software is powerful. Operations make it work.</h2>
-          <p>Not every business has a team waiting to update another system. Pravaah can provide the technology and, when required, the operational support to keep it running.</p>
-          <p><strong>Technology when you need it. People when you need them.</strong></p>
-          <div class="cards-2" style="margin-top:24px">
-            <article class="card">
-              <h3>Your team</h3>
-              <p>Uses the system directly.</p>
-            </article>
-            <article class="card">
-              <h3>Pravaah operations</h3>
-              <p>Trained personnel can work inside the customer's system with controlled access.</p>
-            </article>
+          <div class="project-media">
+            <figure class="device">
+              <!-- Replace the .svg file with scrapsure-overview.png when screenshots are ready -->
+              <img src="assets/screenshots/scrapsure-overview.svg" alt="Scrapsure overview showing purchase orders, shipments and documents" width="390" height="844" loading="lazy" />
+            </figure>
+            <figure class="device device-offset">
+              <!-- Replace the .svg file with scrapsure-shipments.png when screenshots are ready -->
+              <img src="assets/screenshots/scrapsure-shipments.svg" alt="Scrapsure shipments list with vehicle and purchase order details" width="390" height="844" loading="lazy" />
+            </figure>
           </div>
-          <p class="note">Controlled access. Company-specific visibility. Role-based permissions. Pravaah personnel only see what the customer grants.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="why" class="section section-soft" aria-labelledby="why-heading">
+      <div class="wrap">
+        <header class="section-head reveal-up">
+          <h2 id="why-heading">Why Businesses Choose Pravaah Solutions</h2>
+        </header>
+        <div class="value-grid">
+          <article class="value-card reveal-up">
+            <h3>Business-First Thinking</h3>
+            <p>We start by understanding the business problem, not choosing technology first.</p>
+          </article>
+          <article class="value-card reveal-up">
+            <h3>Simple Communication</h3>
+            <p>No technical language required. We explain things clearly.</p>
+          </article>
+          <article class="value-card reveal-up">
+            <h3>Custom Solutions</h3>
+            <p>Your software is built around your workflow.</p>
+          </article>
+          <article class="value-card reveal-up">
+            <h3>One Long-Term Partner</h3>
+            <p>From idea and development to maintenance and improvements.</p>
+          </article>
+          <article class="value-card reveal-up">
+            <h3>Practical Technology</h3>
+            <p>We focus on technology that actually helps your business.</p>
+          </article>
         </div>
-        <div class="ops-visual">
-          <div class="ops-node">Customer</div>
-          <span class="down-arrow" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 16 16"><path fill="currentColor" d="M8 3v8.2l2.8-2.8.8.8L8 14 4.4 11.2l.8-.8L8 11.2V3z"/></svg></span>
-          <div class="ops-node accent">Pravaah System</div>
-          <div class="ops-split">
-            <div>
-              <span class="down-arrow" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 16 16"><path fill="currentColor" d="M8 3v8.2l2.8-2.8.8.8L8 14 4.4 11.2l.8-.8L8 11.2V3z"/></svg></span>
-              <div class="ops-node">Customer Team</div>
+      </div>
+    </section>
+
+    <section id="about" class="section" aria-labelledby="about-heading">
+      <div class="wrap">
+        <header class="section-head reveal-up">
+          <h2 id="about-heading">Meet The People Behind Pravaah Solutions</h2>
+          <p class="lede">A small founder-led company. You will always know who you are talking to.</p>
+        </header>
+        <div class="people-grid">
+          <article class="person-card reveal-up">
+            <div class="person-photo">
+              <img src="assets/images/ketan-mestry.jpg" alt="Ketan Mestry, co-founder of Pravaah Solutions" width="400" height="480" loading="lazy" data-optional-image />
+              <span class="avatar-fallback" aria-hidden="true">KM</span>
             </div>
-            <div>
-              <span class="down-arrow" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 16 16"><path fill="currentColor" d="M8 3v8.2l2.8-2.8.8.8L8 14 4.4 11.2l.8-.8L8 11.2V3z"/></svg></span>
-              <div class="ops-node">Pravaah Operations</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="how-it-works">
-      <div class="wrap">
-        <p class="eyebrow">How Pravaah works</p>
-        <h2>From business problem to working solution.</h2>
-        <div class="how-steps">
-          <article class="how-step"><div class="step" style="color:var(--teal);font-weight:700;letter-spacing:.12em;font-size:.8rem">01</div><h3>Understand</h3><p>Understand the business, workflow, and problem.</p></article>
-          <article class="how-step"><div class="step" style="color:var(--teal);font-weight:700;letter-spacing:.12em;font-size:.8rem">02</div><h3>Design</h3><p>Define the right digital solution.</p></article>
-          <article class="how-step"><div class="step" style="color:var(--teal);font-weight:700;letter-spacing:.12em;font-size:.8rem">03</div><h3>Build</h3><p>Develop the website, application, or system.</p></article>
-          <article class="how-step"><div class="step" style="color:var(--teal);font-weight:700;letter-spacing:.12em;font-size:.8rem">04</div><h3>Support</h3><p>Help the business use, improve, and scale the solution.</p></article>
-          <article class="how-step optional"><div class="step" style="color:var(--teal);font-weight:700;letter-spacing:.12em;font-size:.8rem">05</div><h3>Operate</h3><p>Provide operational support when required.</p></article>
-        </div>
-        <p class="note">Business conversation and requirement discovery sit with sales. Technology, product, and implementation sit with engineering. Together they recommend, design, build, launch, and scale.</p>
-      </div>
-    </section>
-
-    <section class="section-muted" id="why">
-      <div class="wrap">
-        <p class="eyebrow">Why Pravaah</p>
-        <h2>Built for operations, not presentations.</h2>
-        <div class="cards-4">
-          <article class="card"><h3>Real-world workflows</h3><p>Solutions designed around how businesses actually operate.</p></article>
-          <article class="card"><h3>Practical technology</h3><p>Technology should solve a business problem, not simply look impressive.</p></article>
-          <article class="card"><h3>Connected information</h3><p>Bring scattered information into structured workflows.</p></article>
-          <article class="card"><h3>Long-term partnership</h3><p>Start with a website or solution and continue building as the business grows.</p></article>
-        </div>
-      </div>
-    </section>
-
-    <section id="about">
-      <div class="wrap split">
-        <div>
-          <p class="eyebrow">About</p>
-          <h2>We build systems that make work flow.</h2>
-          <p>Pravaah Solutions was created around a simple observation: many businesses have digitized parts of their work, but their actual operations remain fragmented across WhatsApp, spreadsheets, documents, and people.</p>
-          <p>Pravaah exists to connect those pieces.</p>
-          <p>We build practical websites, software, and operational systems that help businesses move from fragmented processes to structured workflows.</p>
-          <p><strong>Build. Digitize. Operate.</strong></p>
-        </div>
-        <div>
-          <p class="eyebrow">Future expansion</p>
-          <h3>Beyond recycling and scrap</h3>
-          <p>Scrap and recycling operations are the first focus. These industries are future expansion areas — not current claims of delivery:</p>
-          <div class="industries">
-            <span class="pill">Logistics</span>
-            <span class="pill">Manufacturing</span>
-            <span class="pill">Construction</span>
-            <span class="pill">Trading</span>
-            <span class="pill">Other operations-heavy businesses</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section-muted" id="founders">
-      <div class="wrap">
-        <p class="eyebrow">Founders</p>
-        <h2>Technology meets business.</h2>
-        <div class="cards-2">
-          <article class="card founder">
             <h3>Ketan Mestry</h3>
-            <p class="role">Co-Founder | Technology &amp; Product</p>
-            <p>Turns business problems into practical digital systems. Focus: technology, product development, software architecture, business systems, digital transformation, and product strategy.</p>
+            <p class="role">Technology, product and development</p>
+            <p>Turns everyday business problems into practical digital systems that people can actually use.</p>
           </article>
-          <article class="card founder">
-            <h3>Gaurav Kothmire</h3>
-            <p class="role">Co-Founder | Sales &amp; Business Development</p>
-            <p>Understands customer requirements, develops relationships, and identifies business opportunities. Focus: sales, lead generation, client relationships, and helping customers identify the right digital solution.</p>
-          </article>
-        </div>
-        <p class="connect">One builds the solution. One understands the opportunity. Together, we build around the business.</p>
-      </div>
-    </section>
-
-    <section>
-      <div class="wrap" style="text-align:center">
-        <p class="eyebrow">A clear path</p>
-        <h2>From first conversation to a working system.</h2>
-        <div class="sales-flow">
-          <span>Lead</span>
-          <span class="flow-arrow" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 16 16"><path fill="currentColor" d="M3 8h8.2L8.4 5.2l.8-.8L14 8l-4.8 3.6-.8-.8L11.2 8H3z"/></svg></span>
-          <span>Business conversation</span>
-          <span class="flow-arrow" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 16 16"><path fill="currentColor" d="M3 8h8.2L8.4 5.2l.8-.8L14 8l-4.8 3.6-.8-.8L11.2 8H3z"/></svg></span>
-          <span>Understand requirement</span>
-          <span class="flow-arrow" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 16 16"><path fill="currentColor" d="M3 8h8.2L8.4 5.2l.8-.8L14 8l-4.8 3.6-.8-.8L11.2 8H3z"/></svg></span>
-          <span>Recommend solution</span>
-          <span class="flow-arrow" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 16 16"><path fill="currentColor" d="M3 8h8.2L8.4 5.2l.8-.8L14 8l-4.8 3.6-.8-.8L11.2 8H3z"/></svg></span>
-          <span>Design &amp; build</span>
-          <span class="flow-arrow" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 16 16"><path fill="currentColor" d="M3 8h8.2L8.4 5.2l.8-.8L14 8l-4.8 3.6-.8-.8L11.2 8H3z"/></svg></span>
-          <span>Launch</span>
-          <span class="flow-arrow" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 16 16"><path fill="currentColor" d="M3 8h8.2L8.4 5.2l.8-.8L14 8l-4.8 3.6-.8-.8L11.2 8H3z"/></svg></span>
-          <span>Support &amp; scale</span>
-        </div>
-      </div>
-    </section>
-
-    <section class="final-cta">
-      <div class="wrap">
-        <h2>Make your business flow.</h2>
-        <p class="lede" style="margin-inline:auto">Whether you need a website, a custom system, or operational support, let's build what your business needs next.</p>
-        <div class="actions">
-          <a class="btn btn-primary" href="#contact">Talk to Pravaah</a>
-          <a class="btn btn-ghost" href="#website-leads">Get Your Website</a>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact">
-      <div class="wrap split">
-        <div>
-          <p class="eyebrow">Contact</p>
-          <h2>Let's make your business flow.</h2>
-          <p>Tell us what you're currently managing manually, what you're trying to build, or what your business needs next. We'll explore where a better digital solution can help.</p>
-          <p><a href="mailto:connect@pravaahsolutions.com">connect@pravaahsolutions.com</a></p>
-          <p>pravaahsolutions.com</p>
-        </div>
-        <div>
-          <form id="contact-form" novalidate>
-            <input class="hp" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" />
-            <div class="form-grid">
-              <div class="field">
-                <label for="name">Name</label>
-                <input id="name" name="name" autocomplete="name" required />
-                <span class="error-text">Please enter your name.</span>
-              </div>
-              <div class="field">
-                <label for="company">Company</label>
-                <input id="company" name="company" autocomplete="organization" required />
-                <span class="error-text">Please enter your company.</span>
-              </div>
-              <div class="field">
-                <label for="email">Work Email</label>
-                <input id="email" name="email" type="email" autocomplete="email" required />
-                <span class="error-text">Please enter a valid work email.</span>
-              </div>
-              <div class="field">
-                <label for="phone">Phone</label>
-                <input id="phone" name="phone" type="tel" autocomplete="tel" required />
-                <span class="error-text">Please enter a phone number.</span>
-              </div>
-              <div class="field full">
-                <label for="business">What does your business do?</label>
-                <input id="business" name="business" required />
-                <span class="error-text">Please describe your business.</span>
-              </div>
-              <div class="field full">
-                <label for="lookingFor">What are you looking for?</label>
-                <select id="lookingFor" name="lookingFor" required>
-                  <option value="">Select an option</option>
-                  <option>New Business Website</option>
-                  <option>Website Redesign</option>
-                  <option>Landing Page</option>
-                  <option>Custom Software</option>
-                  <option>Scrapsure</option>
-                  <option>Managed Operations</option>
-                  <option>Not Sure Yet</option>
-                </select>
-                <span class="error-text">Please choose an option.</span>
-              </div>
-              <div class="field full">
-                <label for="outcome">What do you want your website or system to achieve?</label>
-                <input id="outcome" name="outcome" />
-              </div>
-              <div class="field full">
-                <label for="message">Message</label>
-                <textarea id="message" name="message" required></textarea>
-                <span class="error-text">Please add a short message.</span>
-              </div>
+          <article class="person-card reveal-up">
+            <div class="person-photo">
+              <img src="assets/images/gaurav-kothmire.jpg" alt="Gaurav Kothmire, co-founder of Pravaah Solutions" width="400" height="480" loading="lazy" data-optional-image />
+              <span class="avatar-fallback" aria-hidden="true">GK</span>
             </div>
-            <button class="btn btn-primary" type="submit" style="margin-top:16px">Start a Conversation</button>
-          </form>
-          <div id="form-status" class="form-status" role="status" aria-live="polite"></div>
+            <h3>Gaurav Kothmire</h3>
+            <p class="role">Business development, sales and industry understanding</p>
+            <p>Listens to what the business needs and helps shape a solution that makes commercial sense.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="industries" class="section section-soft" aria-labelledby="industries-heading">
+      <div class="wrap reveal-up">
+        <header class="section-head">
+          <h2 id="industries-heading">We Build Around The Way Your Business Works</h2>
+          <p class="lede">We work with businesses across different industries. If your work is still living in chats, files and follow-ups, we can help.</p>
+        </header>
+        <ul class="industry-list">
+          <li>Manufacturing</li>
+          <li>Trading</li>
+          <li>Recycling</li>
+          <li>Logistics</li>
+          <li>Professional Services</li>
+          <li>Small &amp; Mid-Sized Businesses</li>
+          <li>Startups</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="cta" class="cta-band" aria-labelledby="cta-heading">
+      <div class="cta-shapes" aria-hidden="true"></div>
+      <div class="wrap cta-inner reveal-up">
+        <h2 id="cta-heading">Have A Project In Mind?</h2>
+        <p>You don't need a technical specification. Just tell us what you want to improve.</p>
+        <div class="actions">
+          <a class="btn btn-light" href="#contact">Tell Us About Your Project</a>
+          <a class="btn btn-ghost js-whatsapp" href="#contact">WhatsApp Us</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section" aria-labelledby="contact-heading">
+      <div class="wrap contact-grid">
+        <div class="reveal-up">
+          <h2 id="contact-heading">Start The Conversation</h2>
+          <p class="lede">Tell us what is difficult today. We will come back with a clear next step.</p>
+          <ul class="contact-points">
+            <li><a class="js-email" href="mailto:connect@pravaahsolutions.com">connect@pravaahsolutions.com</a></li>
+            <li><a class="js-whatsapp" href="#contact">WhatsApp Us</a></li>
+          </ul>
+        </div>
+        <div class="reveal-up">
+        <form class="contact-form" id="contact-form" novalidate>
+          <input class="hp" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" />
+          <div class="field">
+            <label for="name">Name</label>
+            <input id="name" name="name" autocomplete="name" required />
+            <span class="error-text">Please enter your name.</span>
+          </div>
+          <div class="field">
+            <label for="phone">Phone / WhatsApp</label>
+            <input id="phone" name="phone" type="tel" autocomplete="tel" required />
+            <span class="error-text">Please enter a phone or WhatsApp number.</span>
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" autocomplete="email" required />
+            <span class="error-text">Please enter a valid email.</span>
+          </div>
+          <div class="field">
+            <label for="need">What do you need?</label>
+            <select id="need" name="need">
+              <option value="">I'm not sure yet</option>
+              <option>I need a website</option>
+              <option>I need a mobile app</option>
+              <option>I need a business application</option>
+              <option>I want to automate a process</option>
+              <option>I have a business idea</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="details">Tell us about your business or idea</label>
+            <textarea id="details" name="details" required></textarea>
+            <span class="error-text">Please tell us a little about what you need.</span>
+          </div>
+          <button class="btn btn-primary" type="submit">Start The Conversation</button>
+          <p class="form-hint">Until a form service is connected, this will open WhatsApp or email with your message.</p>
+        </form>
+        <div id="form-status" class="form-status" role="status" aria-live="polite"></div>
         </div>
       </div>
     </section>
@@ -611,34 +456,53 @@
   <footer class="site-footer">
     <div class="wrap footer-grid">
       <div>
-        <a class="logo" href="index.html"><img src="assets/logo.png" alt="Pravaah Solutions" width="196" height="64" /></a>
-        <p>Building systems that keep business moving.</p>
-        <p class="social-placeholder">LinkedIn and other social profiles coming soon.</p>
+        <a class="logo" href="index.html">
+          <img src="assets/images/logo-light.svg" alt="Pravaah Solutions" width="196" height="40" />
+        </a>
+        <p class="footer-blurb">We help businesses digitize, automate and improve their workflows through websites, mobile apps and custom business applications.</p>
+        <div class="socials">
+          <a class="js-social-linkedin is-placeholder" href="#" aria-label="LinkedIn (coming soon)">LinkedIn</a>
+          <a class="js-social-instagram is-placeholder" href="#" aria-label="Instagram (coming soon)">Instagram</a>
+        </div>
       </div>
       <div>
         <h3>Explore</h3>
         <ul class="footer-links">
-          <li><a href="index.html">Home</a></li>
           <li><a href="#services">Services</a></li>
-          <li><a href="scrapsure.html">Products</a></li>
-          <li><a href="scrapsure.html">Scrapsure</a></li>
+          <li><a href="#how-it-works">How It Works</a></li>
+          <li><a href="#projects">Projects</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
       <div>
+        <h3>Services</h3>
+        <ul class="footer-links">
+          <li><a href="#services">Business Websites</a></li>
+          <li><a href="#services">Business Applications</a></li>
+          <li><a href="#services">Mobile Apps</a></li>
+          <li><a href="#services">Automation</a></li>
+        </ul>
+      </div>
+      <div>
         <h3>Contact</h3>
         <ul class="footer-links">
-          <li><a href="mailto:connect@pravaahsolutions.com">connect@pravaahsolutions.com</a></li>
-          <li>pravaahsolutions.com</li>
+          <li><a class="js-email" href="mailto:connect@pravaahsolutions.com">connect@pravaahsolutions.com</a></li>
+          <li><a class="js-whatsapp" href="#contact">WhatsApp</a></li>
+          <li class="js-phone-wrap" hidden><a class="js-phone" href="tel:"></a></li>
         </ul>
       </div>
     </div>
     <div class="wrap legal">
-      <span>© 2026 Pravaah Solutions. All rights reserved.</span>
-      <span>Build. Digitize. Operate.</span>
+      <span class="js-copyright">© 2026 Pravaah Solutions. All rights reserved.</span>
+      <span>You explain your business problem. We figure out the technology.</span>
     </div>
   </footer>
-  <script src="js/main.js"></script>
+
+  <a class="whatsapp-fab js-whatsapp" href="#contact" aria-label="WhatsApp Us">
+    <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.7-1.2A9 9 0 1 0 12 3zm.1 14.4c-1.5 0-2.9-.4-4.1-1.2l-.3-.2-2.5.7.7-2.4-.2-.3A6.7 6.7 0 1 1 12.1 17.4zm3.8-4.4c-.2-.1-1.2-.6-1.4-.7-.2-.1-.3-.1-.5.1l-.7.8c-.1.2-.3.2-.5.1-.9-.4-1.7-1.1-2.2-2-.2-.3 0-.4.1-.6l.4-.5c.1-.1.1-.3.1-.4s0-.3-.1-.4l-.7-1.6c-.2-.4-.4-.4-.5-.4h-.4c-.2 0-.4.1-.6.3-.2.2-.8.8-.8 1.9s.8 2.2.9 2.3c.2.3 1.6 2.6 4 3.5 1.6.6 2 .5 2.4.4.4-.1 1.2-.5 1.4-1 .2-.5.2-.9.1-1 0-.1-.2-.2-.4-.3z"/></svg>
+  </a>
+
+  <script src="js/script.js"></script>
 </body>
 </html>
