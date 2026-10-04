@@ -4,11 +4,17 @@
   const CONFIG = {
     companyName: "Pravaah Solutions",
     email: "connect@pravaahsolutions.com",
-    whatsappNumber: "YOUR_WHATSAPP_NUMBER",
+    whatsappNumber: "918149405841",
     phone: "YOUR_PHONE_NUMBER",
     websiteUrl: "https://pravaahsolutions.com",
     formEndpoint: "",
     whatsappMessage: "Hi Pravaah Solutions, I'd like to discuss a project for my business.",
+    whatsappIntents: {
+      app: "Hi Pravaah Solutions, I want to discuss building a mobile app for my business.",
+      website: "Hi Pravaah Solutions, I want to discuss building a website for my business.",
+      webapp: "Hi Pravaah Solutions, I want to discuss building a web app for my business.",
+      custom: "Hi Pravaah Solutions, I have a custom requirement and would like to discuss it.",
+    },
     social: {
       linkedin: "",
       instagram: "",
@@ -41,11 +47,61 @@
   }
 
   function initWhatsAppLinks() {
+    const modal = document.getElementById("wa-modal");
+    const closeEls = modal ? modal.querySelectorAll("[data-wa-close]") : [];
+    const fallbackHref = whatsappUrl();
+    const openTarget = isPlaceholder(CONFIG.whatsappNumber) ? "_self" : "_blank";
+
     document.querySelectorAll(".js-whatsapp").forEach(function (link) {
-      link.setAttribute("href", whatsappUrl());
-      link.setAttribute("target", isPlaceholder(CONFIG.whatsappNumber) ? "_self" : "_blank");
+      link.setAttribute("href", fallbackHref);
+      link.setAttribute("target", openTarget);
       link.setAttribute("rel", "noopener noreferrer");
+      link.addEventListener("click", function (event) {
+        if (!modal) return;
+        event.preventDefault();
+        openWhatsAppModal(modal);
+      });
     });
+
+    if (!modal) return;
+
+    closeEls.forEach(function (el) {
+      el.addEventListener("click", function () {
+        closeWhatsAppModal(modal);
+      });
+    });
+
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Escape" && !modal.hidden) closeWhatsAppModal(modal);
+    });
+
+    modal.querySelectorAll("[data-wa-intent]").forEach(function (button) {
+      button.addEventListener("click", function () {
+        const key = button.getAttribute("data-wa-intent");
+        const message = (CONFIG.whatsappIntents && CONFIG.whatsappIntents[key]) || CONFIG.whatsappMessage;
+        closeWhatsAppModal(modal);
+        const url = whatsappUrl(message);
+        if (openTarget === "_blank") {
+          window.open(url, "_blank", "noopener,noreferrer");
+        } else {
+          window.location.href = url;
+        }
+      });
+    });
+  }
+
+  function openWhatsAppModal(modal) {
+    modal.hidden = false;
+    modal.classList.add("is-open");
+    document.body.classList.add("wa-modal-open");
+    const first = modal.querySelector("[data-wa-intent]");
+    if (first) first.focus();
+  }
+
+  function closeWhatsAppModal(modal) {
+    modal.hidden = true;
+    modal.classList.remove("is-open");
+    document.body.classList.remove("wa-modal-open");
   }
 
   function initContactDetails() {
@@ -235,7 +291,7 @@
       }
       if (submit) {
         submit.disabled = false;
-        submit.textContent = "Start The Conversation";
+        submit.textContent = "Start a Project";
       }
     }
 
@@ -249,7 +305,7 @@
       }
       if (submit) {
         submit.disabled = false;
-        submit.textContent = "Start The Conversation";
+        submit.textContent = "Start a Project";
       }
       window.location.href = whatsappUrl(message);
     }

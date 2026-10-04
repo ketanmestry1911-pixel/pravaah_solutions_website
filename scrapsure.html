@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Scrapsure | Shipment and Operations Management | Pravaah Solutions</title>
-  <meta name="description" content="Scrapsure is a shipment and operations management application designed for recycling businesses. Track purchase orders, shipments, documents and operational workflows in one place." />
+  <title>Scrapsure App | Built by Pravaah Solutions</title>
+  <meta name="description" content="Scrapsure is a digital operations system for scrap and recycling businesses, built by Pravaah Solutions. Android + Web." />
   <link rel="canonical" href="https://pravaahsolutions.com/scrapsure.html" />
-  <meta property="og:title" content="Scrapsure | Pravaah Solutions" />
-  <meta property="og:description" content="A shipment and operations management application designed for recycling businesses." />
+  <meta property="og:title" content="Scrapsure App | Pravaah Solutions" />
+  <meta property="og:description" content="A digital operations system designed for scrap and recycling businesses." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://pravaahsolutions.com/scrapsure.html" />
-  <meta property="og:image" content="assets/screenshots/scrapsure-overview.svg" />
-  <meta name="theme-color" content="#007a95" />
-  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml" />
+  <meta property="og:image" content="assets/screenshots/scrapsure-app-desktop.png" />
+  <meta name="theme-color" content="#070b12" />
+  <link rel="icon" href="assets/icons/favicon.png" type="image/png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet" />
@@ -23,7 +23,7 @@
   <header class="site-header" id="site-header">
     <nav class="nav wrap" aria-label="Primary">
       <a class="logo" href="index.html">
-        <img src="assets/images/logo.svg" alt="Pravaah Solutions" width="196" height="40" />
+        <img src="assets/images/logo.png" alt="Pravaah Solutions" width="220" height="56" />
       </a>
       <button class="menu-toggle" type="button" id="menu-toggle" aria-expanded="false" aria-controls="nav-panel" aria-label="Open menu">
         <span class="menu-toggle-bars" aria-hidden="true"></span>
@@ -31,36 +31,38 @@
       <div class="nav-backdrop" id="nav-backdrop" hidden></div>
       <div class="nav-panel" id="nav-panel">
         <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#work">Work</a></li>
           <li><a href="index.html#services">Services</a></li>
-          <li><a href="index.html#how-it-works">How It Works</a></li>
-          <li><a href="index.html#projects">Projects</a></li>
           <li><a href="index.html#about">About</a></li>
           <li><a href="index.html#contact">Contact</a></li>
         </ul>
-        <a class="btn btn-primary nav-cta" href="index.html#contact">Tell Us About Your Project</a>
+        <a class="btn btn-primary nav-cta" href="index.html#contact">Start a Project</a>
       </div>
     </nav>
   </header>
 
   <main id="main">
     <section class="hero">
+      <div class="hero-bg" aria-hidden="true"></div>
       <div class="wrap hero-grid">
         <div class="hero-copy reveal-up">
-          <p class="eyebrow">Featured project</p>
-          <h1>Scrapsure</h1>
-          <p class="lede">A shipment and operations management application designed for recycling businesses.</p>
-          <p>Built around shipment management, purchase orders, document management, operational workflows and business data — so teams stop chasing files and start seeing the work.</p>
+          <p class="eyebrow">A Pravaah product</p>
+          <h1>Scrapsure App</h1>
+          <p class="lede">A digital operations system designed for scrap and recycling businesses. Android + Web.</p>
+          <p>This is the application — not the marketing website. For the product site, visit scrapsure.in.</p>
           <div class="actions">
-            <a class="btn btn-primary" href="index.html#contact">Talk About A Similar Project</a>
-            <a class="btn btn-whatsapp js-whatsapp" href="index.html#contact">WhatsApp Us</a>
+            <a class="btn btn-primary" href="https://app.scrapsure.in" target="_blank" rel="noopener noreferrer">View Product</a>
+            <a class="btn btn-ghost" href="https://scrapsure.in" target="_blank" rel="noopener noreferrer">Visit Scrapsure.in</a>
           </div>
         </div>
-        <div class="project-media reveal scale-in">
+        <div class="project-shots reveal scale-in">
+          <div class="browser-frame">
+            <div class="browser-bar" aria-hidden="true"><i></i><i></i><i></i></div>
+            <img src="assets/screenshots/scrapsure-app-desktop.png" alt="Scrapsure app login screen on desktop" width="1440" height="900" />
+          </div>
           <figure class="device">
-            <img src="assets/screenshots/scrapsure-overview.svg" alt="Scrapsure overview with purchase order and shipment metrics" width="390" height="844" />
-          </figure>
-          <figure class="device device-offset">
-            <img src="assets/screenshots/scrapsure-shipments.svg" alt="Scrapsure shipments list" width="390" height="844" />
+            <img src="assets/screenshots/scrapsure-app-mobile.png" alt="Scrapsure app login screen on mobile" width="390" height="844" />
           </figure>
         </div>
       </div>
@@ -72,22 +74,21 @@
           <h2>What the system helps manage</h2>
         </header>
         <div class="service-grid">
-          <article class="service-card reveal-up"><h3>Shipment management</h3><p>Keep inbound and outbound movement visible as work happens.</p></article>
+          <article class="service-card reveal-up"><h3>Shipments</h3><p>Keep inbound and outbound movement visible as work happens.</p></article>
           <article class="service-card reveal-up"><h3>Purchase orders</h3><p>Track quantities, fulfilment and related shipments in one place.</p></article>
-          <article class="service-card reveal-up"><h3>Document management</h3><p>Keep invoices, e-way bills and other files with the shipment they belong to.</p></article>
-          <article class="service-card reveal-up"><h3>Operational workflows</h3><p>Give teams a shared view of what moved, what is pending and what is complete.</p></article>
+          <article class="service-card reveal-up"><h3>Documents</h3><p>Keep invoices, e-way bills and related files with the shipment they belong to.</p></article>
+          <article class="service-card reveal-up"><h3>Company &amp; users</h3><p>Role-based access so people see what they need for their job.</p></article>
         </div>
       </div>
     </section>
 
     <section class="cta-band">
-      <div class="cta-shapes" aria-hidden="true"></div>
       <div class="wrap cta-inner reveal-up">
-        <h2>Have a similar operational problem?</h2>
-        <p>You don't need a technical specification. Tell us how work happens today.</p>
+        <h2>Need something similar for your business?</h2>
+        <p class="lede">Pravaah builds websites, apps and custom systems around the way you actually work.</p>
         <div class="actions">
-          <a class="btn btn-light" href="index.html#contact">Tell Us About Your Project</a>
-          <a class="btn btn-ghost js-whatsapp" href="index.html#contact">WhatsApp Us</a>
+          <a class="btn btn-primary" href="index.html#contact">Start a Project</a>
+          <a class="btn btn-ghost" href="index.html">Back to Pravaah</a>
         </div>
       </div>
     </section>
@@ -96,12 +97,9 @@
   <footer class="site-footer">
     <div class="wrap legal">
       <span class="js-copyright">© 2026 Pravaah Solutions. All rights reserved.</span>
-      <a href="index.html">Back to Pravaah Solutions</a>
+      <a href="index.html">Pravaah Solutions</a>
     </div>
   </footer>
-  <a class="whatsapp-fab js-whatsapp" href="index.html#contact" aria-label="WhatsApp Us">
-    <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.7-1.2A9 9 0 1 0 12 3zm.1 14.4c-1.5 0-2.9-.4-4.1-1.2l-.3-.2-2.5.7.7-2.4-.2-.3A6.7 6.7 0 1 1 12.1 17.4z"/></svg>
-  </a>
   <script src="js/script.js"></script>
 </body>
 </html>

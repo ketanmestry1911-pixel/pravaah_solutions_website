@@ -28,7 +28,7 @@ Edit `js/script.js`:
 const CONFIG = {
     companyName: "Pravaah Solutions",
     email: "connect@pravaahsolutions.com",
-    whatsappNumber: "YOUR_WHATSAPP_NUMBER",
+    whatsappNumber: "918149405841",
     phone: "YOUR_PHONE_NUMBER",
     websiteUrl: "https://pravaahsolutions.com",
     formEndpoint: "",
@@ -37,15 +37,21 @@ const CONFIG = {
 
 - `whatsappNumber` should be digits with country code, for example `9198XXXXXXXX`.
 - `formEndpoint` can be a Formspree, Web3Forms, Google Apps Script or similar URL. Leave it empty to fall back to WhatsApp or email.
-- Brand colours live in `:root` at the top of `css/style.css`. Changing those variables rethemes the site.
+- Brand colours live in `:root` at the top of `css/style.css`.
+
+## Portfolio URLs
+
+- Scrapsure App: https://app.scrapsure.in
+- Scrapsure.in (product website): https://scrapsure.in
+- Kaleshwar Arts: https://www.kaleshwararts.in
 
 ## Replacing assets
 
 | Asset | Path |
 | --- | --- |
-| Logo | `assets/images/logo.svg` (or swap the `src` to your PNG) |
-| Favicon | `assets/icons/favicon.svg` |
-| Founder photos | `assets/images/ketan-mestry.jpg`, `assets/images/gaurav-kothmire.jpg` |
-| Scrapsure screenshots | `assets/screenshots/scrapsure-overview.png` and `scrapsure-shipments.png` |
-
-If a PNG screenshot is added next to the SVG placeholder, the `<picture>` tags will prefer the PNG automatically.
+| Logo | `assets/images/logo.png` |
+| Favicon | `assets/icons/favicon.png` |
+| Hero laptop | `assets/images/hero-laptop.png` |
+| Scrapsure App login | `assets/screenshots/scrapsure-app-desktop.png`, `scrapsure-app-mobile.png` |
+| Scrapsure.in | `assets/screenshots/scrapsure-in-desktop.png`, `scrapsure-in-mobile.png` |
+| Kaleshwar Arts | `assets/screenshots/kaleshwar-desktop.png`, `kaleshwar-mobile.png` |
