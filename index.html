@@ -373,9 +373,8 @@
               <span class="error-text">Please enter your name.</span>
             </div>
             <div class="field">
-              <label for="phone">Phone / WhatsApp</label>
-              <input id="phone" name="phone" type="tel" autocomplete="tel" required />
-              <span class="error-text">Please enter a phone or WhatsApp number.</span>
+              <label for="phone">Phone / WhatsApp <span class="optional">(optional)</span></label>
+              <input id="phone" name="phone" type="tel" autocomplete="tel" />
             </div>
             <div class="field">
               <label for="email">Work Email</label>
@@ -395,12 +394,11 @@
               </select>
             </div>
             <div class="field">
-              <label for="details">Tell us about your business or idea</label>
-              <textarea id="details" name="details" required></textarea>
-              <span class="error-text">Please tell us a little about what you need.</span>
+              <label for="details">Tell us about your business or idea <span class="optional">(optional)</span></label>
+              <textarea id="details" name="details"></textarea>
             </div>
             <button class="btn btn-primary" type="submit">Start a Project</button>
-            <p class="form-hint">Until a form service is connected, this will open WhatsApp or email with your message.</p>
+            <p class="form-hint">This opens your email app with a message to connect@pravaahsolutions.com.</p>
           </form>
           <div id="form-status" class="form-status" role="status" aria-live="polite"></div>
         </div>

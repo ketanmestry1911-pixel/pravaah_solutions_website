@@ -6,8 +6,7 @@
     email: "connect@pravaahsolutions.com",
     whatsappNumber: "918149405841",
     phone: "YOUR_PHONE_NUMBER",
-    websiteUrl: "https://pravaahsolutions.com",
-    formEndpoint: "",
+    websiteUrl: "https://www.pravaahsolutions.com",
     whatsappMessage: "Hi Pravaah Solutions, I'd like to discuss a project for my business.",
     whatsappIntents: {
       app: "Hi Pravaah Solutions, I want to discuss building a mobile app for my business.",
@@ -41,9 +40,14 @@
   function whatsappUrl(message) {
     const text = encodeURIComponent(message || CONFIG.whatsappMessage);
     if (isPlaceholder(CONFIG.whatsappNumber)) {
-      return "mailto:" + CONFIG.email + "?subject=" + encodeURIComponent("Project enquiry") + "&body=" + text;
+      return mailtoUrl(message);
     }
     return "https://wa.me/" + digitsOnly(CONFIG.whatsappNumber) + "?text=" + text;
+  }
+
+  function mailtoUrl(message) {
+    const text = encodeURIComponent(message || CONFIG.whatsappMessage);
+    return "mailto:" + CONFIG.email + "?subject=" + encodeURIComponent("Project enquiry") + "&body=" + text;
   }
 
   function initWhatsAppLinks() {
@@ -258,62 +262,22 @@
     const form = document.getElementById("contact-form");
     if (!form) return;
     const status = document.getElementById("form-status");
-    const submit = form.querySelector('button[type="submit"]');
 
     function showError(field, on) {
       const wrap = field.closest(".field");
       if (wrap) wrap.classList.toggle("error", on);
     }
 
-    function payloadFromForm() {
-      return {
-        name: form.name.value.trim(),
-        phone: form.phone.value.trim(),
-        email: form.email.value.trim(),
-        need: form.need.value.trim() || "I'm not sure yet",
-        details: form.details.value.trim(),
-      };
-    }
-
-    function fallbackMessage(data) {
+    function fallbackMessage() {
       return [
         CONFIG.whatsappMessage,
         "",
-        "Name: " + data.name,
-        "Phone / WhatsApp: " + data.phone,
-        "Email: " + data.email,
-        "Need: " + data.need,
-        "",
-        data.details,
-      ].join("\n");
-    }
-
-    function succeed() {
-      form.reset();
-      form.hidden = true;
-      if (status) {
-        status.className = "form-status success";
-        status.textContent = "Thanks. We'll get back to you shortly.";
-      }
-      if (submit) {
-        submit.disabled = false;
-        submit.textContent = "Start a Project";
-      }
-    }
-
-    function fallback(data) {
-      const message = fallbackMessage(data);
-      if (status) {
-        status.className = "form-status fail";
-        status.textContent = isPlaceholder(CONFIG.whatsappNumber)
-          ? "Opening email so we still receive your message."
-          : "Opening WhatsApp so we still receive your message.";
-      }
-      if (submit) {
-        submit.disabled = false;
-        submit.textContent = "Start a Project";
-      }
-      window.location.href = whatsappUrl(message);
+        "Name: " + form.name.value.trim(),
+        form.phone.value.trim() ? "Phone / WhatsApp: " + form.phone.value.trim() : null,
+        "Email: " + form.email.value.trim(),
+        "Need: " + (form.need.value.trim() || "I'm not sure yet"),
+        form.details.value.trim() ? "\n" + form.details.value.trim() : null,
+      ].filter(function (line) { return line !== null; }).join("\n");
     }
 
     form.addEventListener("submit", function (event) {
@@ -332,34 +296,15 @@
       if (!ok) return;
 
       if (form._honey && form._honey.value) {
-        succeed();
         return;
       }
 
-      const data = payloadFromForm();
-
-      if (!CONFIG.formEndpoint) {
-        fallback(data);
-        return;
+      if (status) {
+        status.className = "form-status success";
+        status.textContent = "Opening your email app to message " + CONFIG.email + ".";
       }
 
-      if (submit) {
-        submit.disabled = true;
-        submit.textContent = "Sending…";
-      }
-
-      fetch(CONFIG.formEndpoint, {
-        method: "POST",
-        headers: { "Content-Type": "application/json", Accept: "application/json" },
-        body: JSON.stringify(data),
-      })
-        .then(function (res) {
-          if (!res.ok) throw new Error("Request failed");
-          succeed();
-        })
-        .catch(function () {
-          fallback(data);
-        });
+      window.location.href = mailtoUrl(fallbackMessage());
     });
   }
 })();

@@ -1122,6 +1122,11 @@ body.nav-open .nav-panel {
   margin-bottom: 6px;
 }
 
+.field .optional {
+  font-weight: 500;
+  color: var(--color-text-muted);
+}
+
 input,
 select,
 textarea {
