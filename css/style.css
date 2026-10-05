@@ -61,8 +61,18 @@ body {
   overflow-x: clip;
 }
 
+html.nav-open,
 body.nav-open {
   overflow: hidden;
+  overscroll-behavior: none;
+}
+
+body.nav-open .site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
 }
 
 img {
@@ -251,11 +261,21 @@ p {
 .site-header {
   position: sticky;
   top: 0;
-  z-index: 50;
+  z-index: 60;
   height: var(--header-height);
-  background: rgba(7, 11, 18, 0.72);
-  backdrop-filter: blur(16px);
+  background: transparent;
   border-bottom: 1px solid transparent;
+}
+
+.site-header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: rgba(12, 18, 32, 0.58);
+  -webkit-backdrop-filter: blur(18px);
+  backdrop-filter: blur(18px);
+  pointer-events: none;
 }
 
 .site-header.is-scrolled {
@@ -277,6 +297,8 @@ p {
 }
 
 .menu-toggle {
+  position: relative;
+  z-index: 70;
   width: 44px;
   height: 44px;
   border-radius: 12px;
@@ -315,18 +337,22 @@ body.nav-open .menu-toggle-bars::after { top: 0; transform: rotate(-45deg); }
 .nav-backdrop {
   position: fixed;
   inset: var(--header-height) 0 0;
-  background: rgba(0, 0, 0, 0.5);
-  z-index: 40;
+  background: rgba(7, 11, 18, 0.28);
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+  z-index: 55;
 }
 
 .nav-panel {
   display: none;
   position: fixed;
   inset: var(--header-height) 0 0;
-  background: #0b1220;
+  background: rgba(12, 18, 32, 0.62);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
   padding: 16px 20px 28px;
-  z-index: 45;
-  overflow: auto;
+  z-index: 56;
+  overflow: hidden;
 }
 
 body.nav-open .nav-panel {
@@ -430,15 +456,20 @@ body.nav-open .nav-panel {
   height: auto;
 }
 
-.phone {
+.phone-photo {
   position: absolute;
-  left: 0;
-  bottom: 8px;
-  width: 128px;
-  transform: perspective(1000px) rotateY(16deg) rotateX(6deg);
-  animation: floatB 6.4s var(--ease) infinite;
+  left: -2%;
+  bottom: -6px;
+  width: min(42%, 190px);
   z-index: 3;
-  filter: drop-shadow(0 22px 28px rgba(0, 0, 0, 0.5));
+  animation: floatB 6.4s var(--ease) infinite;
+  pointer-events: none;
+}
+
+.phone-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .phone-bezel {
@@ -1407,6 +1438,8 @@ body.wa-modal-open {
     position: static;
     inset: auto;
     background: transparent;
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
     padding: 0;
     overflow: visible;
     align-items: center;
@@ -1460,10 +1493,10 @@ body.wa-modal-open {
     right: -8%;
   }
 
-  .phone {
-    width: 148px;
-    left: 8px;
-    bottom: 20px;
+  .phone-photo {
+    width: 268px;
+    left: -4%;
+    bottom: -18px;
   }
 
   .service-grid,

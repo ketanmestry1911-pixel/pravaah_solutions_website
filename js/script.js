@@ -148,6 +148,7 @@
     if (!toggle || !panel) return;
 
     function setOpen(open) {
+      document.documentElement.classList.toggle("nav-open", open);
       document.body.classList.toggle("nav-open", open);
       toggle.setAttribute("aria-expanded", open ? "true" : "false");
       toggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
@@ -180,6 +181,11 @@
       if (header && header.contains(event.target)) return;
       closeMenu();
     });
+
+    document.addEventListener("touchmove", function (event) {
+      if (!document.body.classList.contains("nav-open")) return;
+      event.preventDefault();
+    }, { passive: false });
   }
 
   function initHeaderScroll() {
